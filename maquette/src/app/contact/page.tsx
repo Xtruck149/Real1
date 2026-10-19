@@ -90,6 +90,7 @@ export default function ContactPage() {
             Réseaux sociaux
           </h2>
           <ul className="mt-4 flex flex-wrap gap-3">
+            {site.social.length === 0 ? <li className="text-muted">Liens officiels à confirmer avec l&apos;établissement.</li> : null}
             {site.social.map((s) => (
               <li key={s.url} className="flex items-center">
                 <a href={s.url} target="_blank" rel="noopener noreferrer" className="btn btn-ghost min-h-11 text-sm">

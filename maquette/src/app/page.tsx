@@ -1,7 +1,8 @@
 import Link from "next/link";
 import { DemoImage } from "@/components/DemoImage";
 import { FactBadge, FactText } from "@/components/FactBadge";
-import { eventFormats, gallery, heroImage, specialties } from "@/content/gallery";
+import { Hero } from "@/components/Hero";
+import { eventFormats, gallery, specialties } from "@/content/gallery";
 import { menu } from "@/content/menu";
 import { copy, site } from "@/content/site";
 
@@ -11,32 +12,7 @@ export default function HomePage() {
 
   return (
     <>
-      <section aria-labelledby="hero-title" className="relative isolate overflow-hidden">
-        <DemoImage file={heroImage.file} alt={heroImage.alt} sizes="100vw" priority fill className="-z-10 object-cover opacity-70" />
-        <div aria-hidden="true" className="absolute inset-0 -z-10 bg-gradient-to-t from-bg via-bg/70 to-bg/20" />
-        <p className="absolute right-4 top-4 rounded-full bg-black/60 px-3 py-1 text-[0.7rem] font-semibold uppercase tracking-wide text-white/90">
-          Visuel de démonstration
-        </p>
-        <div className="container-site flex min-h-[78svh] flex-col justify-end pb-14 pt-24 md:min-h-[86svh] md:pb-20">
-          <p className="eyebrow">{copy.heroEyebrow}</p>
-          <h1 id="hero-title" className="mt-4 max-w-4xl text-5xl sm:text-6xl md:text-7xl lg:text-8xl">
-            {copy.heroTitle}
-          </h1>
-          <p className="mt-6 max-w-xl text-lg text-ink/85">{copy.heroText}</p>
-          <div className="mt-8 flex flex-wrap gap-3">
-            <Link href={site.primaryCta.href} className="btn btn-primary">
-              {site.primaryCta.label}
-            </Link>
-            <Link href="/menu" className="btn btn-ghost">
-              Découvrir le menu
-            </Link>
-          </div>
-          <p className="mt-8 text-sm text-muted">
-            <span aria-hidden="true">📍 </span>
-            <FactText fact={c.address} />
-          </p>
-        </div>
-      </section>
+      <Hero />
 
       <section aria-labelledby="intro-title" className="container-site py-20 md:py-28">
         <div className="grid gap-10 lg:grid-cols-[1fr_1.4fr] lg:items-end">

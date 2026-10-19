@@ -57,7 +57,7 @@ export function QuickActions({ whatsapp, whatsappMessage, tel, cta, name }: Prop
             )}
           </li>
           <li>
-            <a {...whatsappProps} className="flex min-h-12 flex-col items-center justify-center rounded-xl text-xs font-semibold text-[#5fe08f]">
+            <a {...whatsappProps} className="flex min-h-12 flex-col items-center justify-center rounded-xl text-xs font-semibold text-whatsapp">
               <WhatsAppIcon />
               WhatsApp
             </a>

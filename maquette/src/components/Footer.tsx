@@ -29,6 +29,7 @@ export function Footer() {
         <div>
           <h2 className="font-body text-sm font-bold uppercase tracking-widest text-muted">Réseaux sociaux</h2>
           <ul className="mt-3 space-y-2">
+            {site.social.length === 0 ? <li className="text-muted">Liens officiels à confirmer avec l&apos;établissement.</li> : null}
             {site.social.map((s) => (
               <li key={s.url}>
                 <a href={s.url} target="_blank" rel="noopener noreferrer" className="hover:text-accent">
