@@ -1,0 +1,57 @@
+{
+ "ambiance-1.webp": {
+  "width": 900,
+  "height": 1200,
+  "blurDataURL": "data:image/webp;base64,UklGRkgAAABXRUJQVlA4IDwAAAAQAgCdASoMABAAA4BaJZQC7AD1fUaq0VLAAP710vi/Y1acbDvo5pNST+9RwQaQt14whUXvTg/wYYxAAAA="
+ },
+ "ambiance-2.webp": {
+  "width": 1200,
+  "height": 900,
+  "blurDataURL": "data:image/webp;base64,UklGRjQAAABXRUJQVlA4ICgAAABwAQCdASoMAAkAA4BaJZwCdAFAAAD+8jkV5U5FhZE+Wz0UQgcd44AA"
+ },
+ "ambiance-3.webp": {
+  "width": 1200,
+  "height": 900,
+  "blurDataURL": "data:image/webp;base64,UklGRjQAAABXRUJQVlA4ICgAAADQAQCdASoMAAkAA4BaJZwCdAEPC4GmAAD+9ZXdWL6ToHrnURaaQggA"
+ },
+ "evenement-1.webp": {
+  "width": 1200,
+  "height": 900,
+  "blurDataURL": "data:image/webp;base64,UklGRj4AAABXRUJQVlA4IDIAAADQAQCdASoMAAkAA4BaJYwCdAEOjuLhgAD+9Cx6MxkSOdWHK6ulEUxVlgWDkRJ0XMgAAA=="
+ },
+ "evenement-2.webp": {
+  "width": 1200,
+  "height": 900,
+  "blurDataURL": "data:image/webp;base64,UklGRkAAAABXRUJQVlA4IDQAAADQAQCdASoMAAkAA4BaJYwCdAEOwVarQAD+9XOsFQe8dtT8S+HTOW82sC64UsNcURm+IAAA"
+ },
+ "evenements-hero.webp": {
+  "width": 1600,
+  "height": 900,
+  "blurDataURL": "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAADQAQCdASoMAAcAA4BaJYwCdAEOzXuzAAD+9WtvZm1s/0T3InqzoCWFS+DrAMAA"
+ },
+ "hero.webp": {
+  "width": 1920,
+  "height": 1080,
+  "blurDataURL": "data:image/webp;base64,UklGRjIAAABXRUJQVlA4ICYAAADwAQCdASoMAAcAA4BaJZwC7AEO//CpF4AA/vVtcduj+YFtfIAAAA=="
+ },
+ "plat-1.webp": {
+  "width": 1200,
+  "height": 900,
+  "blurDataURL": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAADQAQCdASoMAAkAA4BaJQBOgCFrteOv4AD+7SuL3doopE5JZR2OEplm4B0qtOFInLuXZwGRDFYVf2ILFvTPmVWoVuaHntGUBfEAAA=="
+ },
+ "plat-2.webp": {
+  "width": 1200,
+  "height": 900,
+  "blurDataURL": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAAAwAgCdASoMAAkAA4BaJYwCdAELz86J9tGcAAD+5vqyFefxxi9RrSSqSTUWOfqpRs5Of6v1OwhMcSbbMRxvHo1YLLCXKUgavcrjVrz8SAAAAA=="
+ },
+ "plat-3.webp": {
+  "width": 900,
+  "height": 1200,
+  "blurDataURL": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAAAwAgCdASoMABAAA4BaJZQCdAYqruKt2+lJAAD+9KArA8a4V/Hncx/gLP9rGynO82GPQk1LF4+xxOjvAWc9xfNKOM9RKMZtz0b6675kXrQ2qAAA"
+ },
+ "plat-4.webp": {
+  "width": 1200,
+  "height": 900,
+  "blurDataURL": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAABQAgCdASoMAAkAA4BaJYwCdAYtBnlNqR5FEAAA/u+sHc+fvxkGS+PL9c6RGvdkGvSKIH0b7j+/EYbZAXmO4/L/YfVWXnXLxKLcV1P/EgAAAA=="
+ }
+}
