@@ -33,7 +33,7 @@ const DemoLabel = () => (
 export function Hero() {
   if (copy.heroLayout === "split") {
     return (
-      <section aria-labelledby="hero-title" className="container-site grid items-center gap-10 pb-16 pt-10 md:pt-16 lg:grid-cols-[1.05fr_1fr] lg:gap-16 lg:pb-24">
+      <section aria-labelledby="hero-title" className="container-site grid items-center overflow-x-clip gap-10 pb-16 pt-10 md:pt-16 lg:grid-cols-[1.05fr_1fr] lg:gap-16 lg:pb-24">
         <div>
           <p className="eyebrow">{copy.heroEyebrow}</p>
           <h1 id="hero-title" className="mt-4 text-5xl sm:text-6xl md:text-7xl">
