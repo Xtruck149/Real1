@@ -78,6 +78,18 @@ for (const vp of VIEWPORTS) {
     log(m.noAlt === 0 && m.unnamedButtons === 0, `${tag} : images avec alt et boutons nommés`);
     log(errors.length === 0, `${tag} : aucune erreur console${errors.length ? " — " + errors[0].slice(0, 120) : ""}`);
     if (path === "/" ) log(m.lang === "fr" && m.title.length > 10, `${tag} : langue et titre définis`);
+    // Scroll like a visitor so scroll-reveal content appears, then check nothing stays hidden.
+    await p.evaluate(async () => {
+      const step = Math.max(200, Math.floor(window.innerHeight * 0.6));
+      for (let y = 0; y < document.documentElement.scrollHeight; y += step) {
+        window.scrollTo(0, y);
+        await new Promise((r) => setTimeout(r, 120));
+      }
+      window.scrollTo(0, 0);
+      await new Promise((r) => setTimeout(r, 900));
+    });
+    const stillHidden = await p.evaluate(() => document.querySelectorAll('[data-reveal="hidden"]').length);
+    log(stillHidden === 0, `${tag} : aucun contenu resté masqué après défilement (${stillHidden})`);
     await p.screenshot({ path: `${OUT}/${vp.name}${path === "/" ? "-accueil" : path.replace(/\//g, "-")}.png`, fullPage: true });
   }
 

@@ -5,6 +5,14 @@ import { Hero } from "@/components/Hero";
 import { eventFormats, gallery, specialties } from "@/content/gallery";
 import { menu } from "@/content/menu";
 import { copy, site } from "@/content/site";
+import { Reveal } from "@/components/Reveal";
+
+/** Line icons (Lucide-style paths): one per highlight, decorative only. */
+const HIGHLIGHT_ICONS = [
+  "M7 3v7a3 3 0 0 0 3 3v8M7 3v5M4 3v5a3 3 0 0 0 3 3M17 3c-2 1.5-3 4-3 7 0 2 1 3 3 3v8",
+  "M8 3h8l-1 7a3 3 0 0 1-6 0L8 3ZM12 13v8M8 21h8",
+  "M7 3v3M17 3v3M4 8h16M5 5h14a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Z",
+];
 
 export default function HomePage() {
   const c = site.contact;
@@ -26,13 +34,18 @@ export default function HomePage() {
         </div>
         <ul className="mt-12 grid gap-4 md:grid-cols-3">
           {copy.highlights.map((h, i) => (
-            <li key={h.title} className="card p-6 md:p-8">
-              <span aria-hidden="true" className="font-display text-5xl text-accent">
-                0{i + 1}
-              </span>
+            <Reveal as="li" key={h.title} delay={i * 110} className="card p-6 md:p-8">
+              <div className="flex items-start justify-between">
+                <span aria-hidden="true" className="font-display text-5xl text-accent">
+                  0{i + 1}
+                </span>
+                <svg aria-hidden="true" viewBox="0 0 24 24" className="h-7 w-7 text-accent/70" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                  <path d={HIGHLIGHT_ICONS[i % HIGHLIGHT_ICONS.length]} />
+                </svg>
+              </div>
               <h3 className="mt-4 text-2xl">{h.title}</h3>
               <p className="mt-2 text-muted">{h.text}</p>
-            </li>
+            </Reveal>
           ))}
         </ul>
       </section>
@@ -71,14 +84,15 @@ export default function HomePage() {
 
       <section aria-labelledby="menu-title" className="container-site py-20 md:py-28">
         <div className="grid gap-12 lg:grid-cols-2">
-          <div className="relative overflow-hidden rounded-[var(--radius-card)]">
+          <Reveal className="zoom-img relative overflow-hidden rounded-[var(--radius-card)] shadow-[0_30px_60px_-30px_rgb(0_0_0/0.9)]">
             <DemoImage file={gallery[0].file} alt={gallery[0].alt} sizes="(min-width: 1024px) 50vw, 100vw" className="h-full w-full object-cover" />
-          </div>
-          <div className="flex flex-col justify-center">
+          </Reveal>
+          <Reveal delay={120} className="flex flex-col justify-center">
             <p className="eyebrow">À la carte</p>
             <h2 id="menu-title" className="mt-3 text-4xl md:text-5xl">
               Un aperçu du menu
             </h2>
+            <span className="rule-gold" aria-hidden="true" />
             <ul className="mt-8 divide-y divide-line border-y border-line">
               {featured.map((item) => (
                 <li key={item.name} className="flex items-baseline justify-between gap-4 py-4">
@@ -87,14 +101,14 @@ export default function HomePage() {
                     <FactBadge status={item.status} />
                     <span className="block text-sm text-muted">{item.category}</span>
                   </span>
-                  <span className="shrink-0 text-sm text-muted">{item.price ? `${item.price.toLocaleString("fr-FR")} F` : "Prix à confirmer"}</span>
+                  <span className="tabular shrink-0 text-sm text-muted">{item.price ? `${item.price.toLocaleString("fr-FR")} F` : "Prix à confirmer"}</span>
                 </li>
               ))}
             </ul>
             <Link href="/menu" className="btn btn-primary mt-8 self-start">
               Voir tout le menu
             </Link>
-          </div>
+          </Reveal>
         </div>
       </section>
 
@@ -130,7 +144,7 @@ export default function HomePage() {
         </div>
         <ul className="mt-10 grid grid-cols-2 gap-3 md:grid-cols-3 md:gap-4">
           {gallery.slice(1, 4).map((img, i) => (
-            <li key={img.file} className={`relative aspect-square overflow-hidden rounded-[var(--radius-card)] ${i === 0 ? "col-span-2 aspect-[2/1] md:col-span-1 md:aspect-square" : ""}`}>
+            <li key={img.file} className={`zoom-img relative aspect-square overflow-hidden rounded-[var(--radius-card)] ${i === 0 ? "col-span-2 aspect-[2/1] md:col-span-1 md:aspect-square" : ""}`}>
               <DemoImage file={img.file} alt={img.alt} fill sizes="(min-width: 768px) 33vw, 50vw" className="object-cover" />
             </li>
           ))}

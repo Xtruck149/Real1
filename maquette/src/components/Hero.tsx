@@ -15,8 +15,11 @@ function Actions() {
           Découvrir le menu
         </Link>
       </div>
-      <p className="mt-8 text-sm text-muted">
-        <span aria-hidden="true">📍 </span>
+      <p className="mt-8 flex flex-wrap items-center gap-x-2 gap-y-1 text-sm text-muted">
+        <svg aria-hidden="true" viewBox="0 0 24 24" className="h-4 w-4 shrink-0 text-accent" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21Z" />
+          <circle cx="12" cy="9.5" r="2.5" />
+        </svg>
         <FactText fact={site.contact.address} />
       </p>
     </>
@@ -56,15 +59,24 @@ export function Hero() {
   return (
     <section aria-labelledby="hero-title" className="relative isolate overflow-hidden">
       <DemoImage file={heroImage.file} alt={heroImage.alt} sizes="100vw" priority fill className="-z-10 object-cover opacity-70" />
+      <div aria-hidden="true" className="hero-glow" />
       <div aria-hidden="true" className="absolute inset-0 -z-10 bg-gradient-to-t from-bg via-bg/70 to-bg/20" />
+      <div aria-hidden="true" className="hero-grain" />
       <DemoLabel />
       <div className="container-site flex min-h-[78svh] flex-col justify-end pb-14 pt-24 md:min-h-[86svh] md:pb-20">
         <p className="eyebrow">{copy.heroEyebrow}</p>
         <h1 id="hero-title" className="mt-4 max-w-4xl text-5xl sm:text-6xl md:text-7xl lg:text-8xl">
           {copy.heroTitle}
         </h1>
+        <span className="rule-gold" aria-hidden="true" />
         <p className="mt-6 max-w-xl text-lg text-ink/85">{copy.heroText}</p>
         <Actions />
+        <a href="#intro-title" aria-label="Descendre vers la présentation" className="scroll-cue mt-10 hidden w-fit items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-muted hover:text-ink md:inline-flex">
+          Découvrir
+          <svg aria-hidden="true" viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M12 5v14m0 0-6-6m6 6 6-6" />
+          </svg>
+        </a>
       </div>
     </section>
   );
